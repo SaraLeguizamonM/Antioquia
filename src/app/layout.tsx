@@ -1,10 +1,14 @@
-// This file is no longer needed as the project has been converted to static HTML.
-// The main content is now in /public/index.html.
-import type {Metadata} from 'next';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Static HTML Page',
-  description: 'This project has been converted to static HTML.',
+  title: "Antioquia",
+  description: "Un viaje al corazón de nuestras tradiciones.",
 };
 
 export default function RootLayout({
@@ -13,8 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Literata:opsz,wght@24..144,400;24..144,700&display=swap" rel="stylesheet" />
+      </head>
+      <body className={cn("min-h-screen bg-background font-body antialiased", inter.className)}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }
