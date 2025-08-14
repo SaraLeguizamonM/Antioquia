@@ -15,7 +15,7 @@ export function Symbol() {
                   <CardContent className="flex flex-col md:flex-row items-center justify-center p-6 gap-6 h-[400px]">
                     <div className="md:w-1/2 flex justify-center">
                       <Image
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Escudo_de_Antioquia.svg/1200px-Escudo_de_Antioquia.svg.png"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLy6CgegOH3w7FYoUjHE_igvbDTysN7TLwzg&s"
                         width="250"
                         height="300"
                         alt="Escudo de Antioquia"
