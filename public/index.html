@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antioquia - Un homenaje a la cultura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Literata:ital,opsz,wght@0,14..72,200..900;1,14..72,200..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --background: 25 20% 12%;
+      --foreground: 60 40% 95%;
+      --card: 25 20% 15%;
+      --card-foreground: 60 40% 95%;
+      --popover: 25 20% 15%;
+      --popover-foreground: 60 40% 95%;
+      --primary: 45 90% 55%;
+      --primary-foreground: 45 30% 10%;
+      --secondary: 25 20% 20%;
+      --secondary-foreground: 60 40% 95%;
+      --muted: 25 20% 25%;
+      --muted-foreground: 60 20% 75%;
+      --accent: 210 80% 60%;
+      --accent-foreground: 210 20% 95%;
+      --destructive: 0 75% 55%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 25 20% 30%;
+      --input: 25 20% 30%;
+      --ring: 210 80% 60%;
+      --radius: 0.8rem;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      font-family: 'Literata', serif;
+      padding: 1rem;
+      background-image: radial-gradient(ellipse at top, hsl(25 15% 18%), hsl(var(--background)) 70%);
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0.5rem;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 0.5rem;
+      border: 1px solid hsl(var(--border));
+      pointer-events: none;
+      z-index: 100;
+    }
+    h1, h2, h3, h4, .font-headline {
+      font-family: 'Belleza', sans-serif;
+    }
+    .text-primary { color: hsl(var(--primary)); }
+    .bg-primary { background-color: hsl(var(--primary)); }
+    .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+    .bg-secondary { background-color: hsl(var(--secondary)); }
+    .bg-card { background-color: hsl(var(--card)); }
+    .text-card-foreground { color: hsl(var(--card-foreground)); }
+    .border-border { border-color: hsl(var(--border)); }
+    .text-foreground-80 { color: hsla(var(--foreground), 0.8); }
+    .text-foreground-70 { color: hsla(var(--foreground), 0.7); }
+    .text-foreground-50 { color: hsla(var(--foreground), 0.5); }
+    .bg-background-80 { background-color: hsla(var(--background), 0.8); }
+    .shadow-primary-20 { box-shadow: 0 0 15px hsl(var(--primary), 0.2); }
+    .shadow-primary-glow { box-shadow: 0 0 25px 5px hsla(var(--primary), 0.1); }
+    
+    .card {
+        border-radius: var(--radius);
+        border: 1px solid hsl(var(--border));
+        background-color: hsl(var(--card));
+        color: hsl(var(--card-foreground));
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
+        transition: all 0.3s;
+    }
+    .card:hover {
+        box-shadow: 0 0 15px hsl(var(--primary), 0.2);
+        border-color: hsla(var(--primary), 0.4);
+        transform: translateY(-0.25rem);
+    }
+  </style>
+</head>
+<body class="bg-background text-foreground antialiased">
+
+  <div class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full bg-background-80 backdrop-blur-sm shadow-sm">
+      <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+        <a href="#" class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-primary"><path d="M4 15.225C6.011 12.637 8.35 10 12 10s5.989 2.637 8 5.225"></path><path d="M9.5 12.5L12 9l2.5 3.5"></path><path d="M3 20h18"></path></svg>
+          <span class="font-headline text-2xl font-bold text-primary">Antioquia</span>
+        </a>
+        <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
+          <a href="#fiesta" class="text-primary/90 transition-colors hover:text-primary">La Fiesta</a>
+          <a href="#comida" class="text-primary/90 transition-colors hover:text-primary">Comida</a>
+          <a href="#simbolos" class="text-primary/90 transition-colors hover:text-primary">Símbolos</a>
+          <a href="#mitos" class="text-primary/90 transition-colors hover:text-primary">Mitos</a>
+          <a href="#historias" class="text-primary/90 transition-colors hover:text-primary">Relatos</a>
+          <a href="#ubicacion" class="text-primary/90 transition-colors hover:text-primary">Ubicación</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section class="relative h-[calc(100dvh-4rem)] w-full">
+        <img src="https://www.antioquiacritica.com/wp-content/uploads/2021/08/maxresdefault.jpg" alt="Paisaje de Antioquia" class="absolute inset-0 h-full w-full object-cover opacity-20">
+        <div class="relative z-10 flex h-full flex-col items-center justify-center text-center px-4">
+          <h1 class="font-headline text-6xl md:text-8xl lg:text-9xl tracking-tight text-primary">
+            La Fiesta de la Antioqueñidad
+          </h1>
+          <p class="mt-4 max-w-3xl text-lg md:text-xl text-foreground-80">
+            Un viaje al corazón de nuestras tradiciones. Celebra con nosotros la riqueza cultural de Antioquia, desde sus sabores hasta sus leyendas.
+          </p>
+          <a href="#fiesta" class="mt-8 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary text-primary-foreground h-11 px-8 text-sm font-medium transition-colors hover:bg-primary/90">
+            <span>Descubre Más</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 transition-transform group-hover:translate-y-1"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="fiesta" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+              <h2 class="font-headline text-4xl md:text-5xl text-primary">Corazón de la Tradición</h2>
+              <p class="mt-4 text-lg text-foreground-80">
+                La Fiesta de la Antioqueñidad es una celebración vibrante que rinde homenaje a la herencia cultural de nuestra región. Conmemoramos las costumbres, la música, la gastronomía y la calidez de nuestra gente.
+              </p>
+              <p class="mt-4 text-foreground-70">
+                En La Pintada, esta fiesta adquiere un color especial. Sus paisajes se convierten en el escenario perfecto para vivir de cerca el folclor paisa, con eventos que unen a la comunidad y a visitantes en un solo sentir. Este proyecto, creado por el INEM José Félix de Restrepo, busca capturar y compartir esa esencia única.
+              </p>
+            </div>
+            <div class="order-1 md:order-2">
+              <img src="https://www.upb.edu.co/es/colegio/imagenes/img-antioque%C3%B1idad-preescolar-col-1464183964377.jpg" alt="Celebración de la Antioqueñidad" width="600" height="700" class="rounded-lg shadow-xl object-cover">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cuisine Section -->
+      <section id="comida" class="py-16 md:py-24 bg-secondary/50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-12">
+            <h2 class="font-headline text-4xl md:text-5xl text-primary">Sabores de la Tierra</h2>
+            <p class="mt-2 max-w-2xl mx-auto text-lg text-foreground-80">
+              La gastronomía antioqueña es un reflejo de nuestra historia y geografía.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="card overflow-hidden"><div class="relative h-64"><img src="https://cdn.colombia.com/gastronomia/2011/08/02/bandeja-paisa-1616.gif" alt="Bandeja Paisa" class="w-full h-full object-cover"></div><div class="p-6"><h3 class="font-headline text-2xl text-primary">Bandeja Paisa</h3><p class="mt-2 text-foreground-70 h-24">El plato más representativo, una generosa combinación de frijoles, arroz, carne molida, chicharrón, huevo frito, plátano, arepa y aguacate.</p></div></div>
+            <div class="card overflow-hidden"><div class="relative h-64"><img src="https://cdn.colombia.com/gastronomia/2011/07/28/sancocho-de-cola-1650.gif" alt="Sancocho Antioqueño" class="w-full h-full object-cover"></div><div class="p-6"><h3 class="font-headline text-2xl text-primary">Sancocho Antioqueño</h3><p class="mt-2 text-foreground-70 h-24">Una sopa robusta hecha con carnes, papa, yuca, plátano y mazorca. Se sirve con arroz y aguacate.</p></div></div>
+            <div class="card overflow-hidden"><div class="relative h-64"><img src="https://cdn0.recetasgratis.net/es/posts/1/8/4/arepa_paisa_75481_orig.jpg" alt="Arepa Antioqueña" class="w-full h-full object-cover"></div><div class="p-6"><h3 class="font-headline text-2xl text-primary">Arepa Antioqueña</h3><p class="mt-2 text-foreground-70 h-24">La compañera de cada comida. Delgada, de maíz blanco, se disfruta con mantequilla, sal o como base para otros manjares.</p></div></div>
+            <div class="card overflow-hidden"><div class="relative h-64"><img src="https://cdn.colombia.com/gastronomia/2012/08/28/mazamorra-paisa-1615.gif" alt="Mazamorra" class="w-full h-full object-cover"></div><div class="p-6"><h3 class="font-headline text-2xl text-primary">Mazamorra</h3><p class="mt-2 text-foreground-70 h-24">Un postre tradicional de maíz pelado, cocido lentamente en leche. Se sirve frío y se endulza con panela o bocadillo.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Symbol Section -->
+      <section id="simbolos" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="w-full max-w-3xl mx-auto p-4 rounded-2xl shadow-primary-glow">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div class="flex justify-center items-center h-[400px]">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLy6CgegOH3w7FYoUjHE_igvbDTysN7TLwzg&s" alt="Escudo de Antioquia" width="400" height="400" class="object-contain drop-shadow-[0_5px_15px_rgba(255,215,0,0.2)]">
+              </div>
+              <div>
+                <h2 class="font-headline text-4xl md:text-5xl text-primary">Nuestro Escudo</h2>
+                <p class="mt-4 text-lg text-foreground-80">El escudo de Antioquia es un símbolo de nuestra identidad, riqueza y valores. Adoptado en 1812, representa la soberanía y la herencia de nuestro pueblo.</p>
+                <p class="mt-4 text-foreground-70">En él se observa una matrona sentada entre el cerro de oro y el de plata, simbolizando la riqueza minera. A sus pies, el río Cauca. La palmera en la parte superior representa el trópico y la libertad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Myths Section -->
+      <section id="mitos" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-12">
+            <h2 class="font-headline text-4xl md:text-5xl text-primary">Mitos y Leyendas</h2>
+            <p class="mt-2 max-w-2xl mx-auto text-lg text-foreground-80">Historias que han pasado de generación en generación, llenas de misterio y tradición oral.</p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="card overflow-hidden"><div class="p-4"><h3 class="font-headline text-2xl">La Madremonte</h3></div><div class="relative h-64 w-full"><img src="https://static.wikia.nocookie.net/el-bestiario/images/2/27/Madremonte4.jpg/revision/latest/scale-to-width-down/250?cb=20181023001606&path-prefix=es" alt="La Madremonte" class="w-full h-full object-cover"></div><div class="p-6"><p class="text-foreground-70">Protectora de los bosques, castiga a quienes dañan la naturaleza.</p></div></div>
+            <div class="card overflow-hidden"><div class="p-4"><h3 class="font-headline text-2xl">El Sombrerón</h3></div><div class="relative h-64 w-full"><img src="https://i.scdn.co/image/ab6765630000ba8a5aef5415853f31f302f35602" alt="El Sombrerón" class="w-full h-full object-cover"></div><div class="p-6"><p class="text-foreground-70">Un ser enigmático que persigue a las mujeres hermosas con su canto.</p></div></div>
+            <div class="card overflow-hidden"><div class="p-4"><h3 class="font-headline text-2xl">La Llorona</h3></div><div class="relative h-64 w-full"><img src="https://img.chilango.com/2017/10/leyenda-de-la-llorona.jpg" alt="La Llorona" class="w-full h-full object-cover"></div><div class="p-6"><p class="text-foreground-70">El lamento de una mujer que busca a sus hijos en los ríos por las noches.</p></div></div>
+            <div class="card overflow-hidden"><div class="p-4"><h3 class="font-headline text-2xl">El Mohán</h3></div><div class="relative h-64 w-full"><img src="https://losmitosyleyendas.com/wp-content/uploads/2024/02/image-2.jpg" alt="El Mohán" class="w-full h-full object-cover"></div><div class="p-6"><p class="text-foreground-70">Ser monstruoso que habita en los ríos y protege a los peces.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Gallery -->
+       <section id="historias" class="py-16 md:py-24 bg-secondary/50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-12">
+            <h2 class="font-headline text-4xl md:text-5xl text-primary">Galería de Relatos</h2>
+            <p class="mt-2 max-w-2xl mx-auto text-lg text-foreground-80">Lee las historias de nuestra comunidad.</p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card p-6 flex flex-col"><h3 class="font-headline text-2xl">El Tesoro del Arriero</h3><p class="text-sm text-foreground-70">por Anónimo</p><p class="mt-4 text-foreground-80 flex-grow">Cuentan que un viejo arriero, en su camino por las montañas de Antioquia, encontró un tesoro escondido por los españoles. No era de oro ni de plata, sino de semillas de un café que florecía hasta en la roca más pelada. Con ese café levantó a su familia y a su pueblo entero, demostrando que la verdadera riqueza de Antioquia está en su tierra y en el trabajo de su gente.</p></div>
+            <div class="card p-6 flex flex-col"><h3 class="font-headline text-2xl">La Promesa del Silletero</h3><p class="text-sm text-foreground-70">por Carmen L.</p><p class="mt-4 text-foreground-80 flex-grow">Mi abuelo fue silletero toda su vida. Cada año, en la Feria de las Flores, le prometía a mi abuela que le haría la silleta más hermosa de todas. Un año, después de que ella partiera, él cumplió su promesa. Su silleta no ganó ningún premio, pero para nosotros, fue la más grande de todas, cargada de amor y recuerdos.</p></div>
+            <div class="card p-6 flex flex-col"><h3 class="font-headline text-2xl">El Eco de la Montaña</h3><p class="text-sm text-foreground-70">por Javier R.</p><p class="mt-4 text-foreground-80 flex-grow">De niño, mi papá me llevaba a las fincas cafeteras y me enseñó a escuchar el eco de las montañas. Decía que si prestabas atención, podías oír las historias de los que vinieron antes. Hoy, cuando tomo una taza de café, cierro los ojos y todavía puedo escuchar ese eco, lleno de la pujanza y la historia de nuestro pueblo.</p></div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Location Section -->
+      <section id="ubicacion" class="py-16 md:py-24 bg-secondary/50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-12">
+            <h2 class="font-headline text-4xl md:text-5xl text-primary">El Epicentro: La Pintada</h2>
+            <p class="mt-2 max-w-2xl mx-auto text-lg text-foreground-80">Descubre el lugar donde la magia sucede. La Pintada es el corazón de nuestra celebración.</p>
+          </div>
+          <a href="https://maps.app.goo.gl/dRVeVrg9WRef5D9k7" target="_blank" rel="noopener noreferrer" class="block relative w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden shadow-2xl mb-16 group">
+            <img src="https://www.weather-forecast.com/locationmaps/La-Pintada-1.10.gif" alt="Mapa de Antioquia" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300">
+            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(var(--primary))" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-16 w-16 text-primary animate-bounce"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span class="mt-2 bg-primary text-primary-foreground font-bold py-1 px-3 rounded-full">La Pintada</span></div>
+            <div class="absolute bottom-4 right-4 bg-background/80 p-4 rounded-lg flex items-center gap-2"><h3 class="font-bold text-primary">Abrir en Google Maps</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-primary"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary/50 border-t border-border/50 mt-16">
+      <div class="container mx-auto py-8 px-4 md:px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-primary"><path d="M4 15.225C6.011 12.637 8.35 10 12 10s5.989 2.637 8 5.225"></path><path d="M9.5 12.5L12 9l2.5 3.5"></path><path d="M3 20h18"></path></svg>
+            <span class="font-headline text-xl font-bold text-primary">Antioquia</span>
+          </div>
+          <div class="text-center">
+            <p class="text-sm text-foreground-70">Un proyecto cultural del <span class="font-bold text-primary">INEM José Félix de Restrepo</span>.</p>
+            <p class="text-xs text-foreground-50 mt-1">&copy; 2024 Antioquia. Todos los derechos reservados.</p>
+            <p class="text-xs text-foreground-50 mt-1">Creado por Sara Leguizamon</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="https://x.com/INEM_Medellin" aria-label="Twitter" class="text-foreground/60 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.9 3 7.1 0 .8-1.2 1.5-2.5 2.1-.3 1.1-.5 2.3-.8 3.2-.3 1.1-1.2 2.2-2.3 2.5-1.2.3-2.5-.2-3.4-.9-.9-.6-1.5-1.6-1.5-2.7 0-1.7.8-3.1 2.5-4.5.3-.3 1.2-.5 1.2-.5-1.8.3-3.9 1.5-5.3 3.3-1.2 1.5-2.7 3.3-4.5 4.3-1.8 1-4.2 1.6-6.2 1.3-1.2-.2-2.3-1.2-2.5-2.4-.2-1.2.5-2.5.9-3.4.4-.9 1.3-2.3 2.8-4.2C6.5 9.3 10.3 5 15.2 2c.4-.2 1-.3 1.5.2.5.5.6 1.2.2 1.7-.5.6-1.3 1.2-2.2 1.8-.9.6-2 1.1-3 1.6-1 .5-2.2 1-3.2 1.6-1.1.6-2.2 1.3-3 2.2-1 .9-1.8 2-2.3 3-.5 1-1.3 2.4-1.2 3.8.2 1.5 1.3 3.2 3.2 3.5 2.1.3 4.9-1.2 6.8-2.8 1.9-1.6 3.6-3.7 4.8-5.3 1.2-1.6 2.3-3.4 3-5.2.8-2.1 1.3-4.3 1-6.1-.2-1.2-1-2.4-2-2.8-1-.4-2.2-.2-3.1.5-1 .7-1.8 1.8-2.2 2.9-.4 1.1-1 2.5-1.7 3.8-.7 1.3-1.7 2.7-2.8 4-1.2 1.3-2.5 2.5-4 3.6-1.5 1.1-3.2 2.1-5 2.7-1.8.6-3.8 1-5.7.6-1.1-.2-2.1-1-2.6-2-.5-1-.6-2.2-.3-3.3.4-1.4 1.3-3.1 2.8-5.2 1.5-2.1 3.8-4.6 6.8-6.6 3-2 6.8-3.3 10.8-3.3 1.8 0 3.5.3 5.1.8 1.6.5 3 1.4 4 2.6.3.3 1 1.2 1 1.2z"/></svg></a>
+            <a href="https://www.instagram.com/inem_medellin/" aria-label="Instagram" class="text-foreground/60 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="https://www.facebook.com/inemjoseoficial/" aria-label="Facebook" class="text-foreground/60 hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
