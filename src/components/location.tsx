@@ -81,7 +81,7 @@ export function Location() {
             </div>
           </div>
           <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/e/e3/La_Pintada_Antioquia_Colombia.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLy6CgegOH3w7FYoUjHE_igvbDTysN7TLwzg&s"
             width={600}
             height={400}
             alt="Foto del municipio de La Pintada, Antioquia"
