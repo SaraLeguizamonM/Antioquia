@@ -91,20 +91,6 @@ export function Location() {
         </div>
 
         <div className="mt-16">
-          <h3 className="text-center font-headline text-2xl font-bold mb-8">Clima en La Pintada</h3>
-          <div className="flex justify-center rounded-xl overflow-hidden border border-border shadow-lg">
-            <Image
-              src="https://www.weather-forecast.com/locationmaps/La-Pintada-1.10.gif"
-              width={600}
-              height={465}
-              alt="Mapa del clima de La Pintada"
-              className="object-cover"
-              data-ai-hint="weather map"
-            />
-          </div>
-        </div>
-
-        <div className="mt-16">
           <h3 className="text-center font-headline text-2xl font-bold mb-8">Recomendaciones de la Comunidad</h3>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="space-y-6">
