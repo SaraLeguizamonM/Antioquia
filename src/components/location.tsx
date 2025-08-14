@@ -81,12 +81,12 @@ export function Location() {
             </div>
           </div>
           <Image
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLy6CgegOH3w7FYoUjHE_igvbDTysN7TLwzg&s"
+            src="https://www.weather-forecast.com/locationmaps/La-Pintada-1.10.gif"
             width={600}
             height={400}
             alt="Foto del municipio de La Pintada, Antioquia"
             className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
-            data-ai-hint="la pintada antioquia"
+            data-ai-hint="la pintada map"
           />
         </div>
 
