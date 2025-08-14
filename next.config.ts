@@ -41,7 +41,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.weather-forecast.com',
+        hostname: 'encrypted-tbn0.gstatic.com',
       },
     ],
   },
