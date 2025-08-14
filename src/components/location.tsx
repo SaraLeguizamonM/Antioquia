@@ -81,12 +81,12 @@ export function Location() {
             </div>
           </div>
           <Image
-            src="https://placehold.co/600x400.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e3/La_Pintada_Antioquia_Colombia.jpg"
             width={600}
             height={400}
-            alt="Mapa de La Pintada"
+            alt="Foto del municipio de La Pintada, Antioquia"
             className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
-            data-ai-hint="map location"
+            data-ai-hint="la pintada antioquia"
           />
         </div>
 

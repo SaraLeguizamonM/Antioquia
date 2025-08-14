@@ -20,9 +20,11 @@ export function Hero() {
         data-ai-hint="flag landscape"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground">
-        <h1 className="font-headline text-5xl font-bold tracking-tight md:text-7xl">La Fiesta de la Antioqueñidad</h1>
-        <p className="mt-4 max-w-2xl text-lg md:text-xl">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
+        <h1 className="font-headline text-5xl font-bold tracking-tight md:text-7xl" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
+          La Fiesta de la Antioqueñidad
+        </h1>
+        <p className="mt-4 max-w-2xl text-lg md:text-xl" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
           Un viaje al corazón de nuestras tradiciones. Celebra con nosotros la riqueza cultural de Antioquia, desde sus
           sabores hasta sus leyendas.
         </p>

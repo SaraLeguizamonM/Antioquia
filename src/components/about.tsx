@@ -23,7 +23,7 @@ export function About() {
             </p>
           </div>
           <Image
-            src="https://placehold.co/600x400.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Jard%C3%ADn_-_Antioquia.jpg"
             width="600"
             height="400"
             alt="Paisaje cafetero de Antioquia"
