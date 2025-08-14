@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  output: 'export', // <-- Esto permite que Next.js genere la carpeta /out
   images: {
     remotePatterns: [
       {
