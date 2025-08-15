@@ -59,7 +59,7 @@ export const mythsAndLegends: Myth[] = [
     title: 'La Madremonte',
     summary: 'Protectora de los bosques, castiga a quienes dañan la naturaleza.',
     content: 'Es la protectora de los bosques y las selvas. Se aparece como una mujer corpulenta, vestida de hojas y musgo, para castigar a los leñadores y cazadores que dañan la naturaleza. Sus gritos retumban en las montañas y desatan tormentas.',
-    image: 'https://static.wikia.nocookie.net/el-bestiario/images/2/27/Madremonte4.jpg/revision/latest?cb=20181023001606&path-prefix=es',
+    image: 'https://static.wikia.nocookie.net/el-bestiario/images/2/27/Madremonte4.jpg/revision/latest/scale-to-width-down/250?cb=20181023001606&path-prefix=es',
     aiHint: 'forest spirit woman'
   },
   {
