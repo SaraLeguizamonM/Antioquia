@@ -1,6 +1,8 @@
-import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card";
 import { culinaryItems } from "@/lib/data";
 import Image from "next/image";
+import { Button } from "./ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
 
 export function Cuisine() {
   return (
@@ -20,7 +22,7 @@ export function Cuisine() {
         </div>
         <div className="mx-auto grid grid-cols-1 gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {culinaryItems.map((item) => (
-            <Card key={item.name}>
+            <Card key={item.name} className="flex flex-col">
               <CardContent className="p-0">
                 <Image
                   src={item.image}
@@ -35,6 +37,21 @@ export function Cuisine() {
                   <CardDescription className="mt-2 text-base">{item.description}</CardDescription>
                 </div>
               </CardContent>
+              <CardFooter className="mt-auto p-4">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="secondary" className="w-full">Ver Receta</Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle className="font-headline text-2xl">{item.name}</DialogTitle>
+                      <DialogDescription className="whitespace-pre-wrap pt-4 text-left text-base">
+                        {item.recipe}
+                      </DialogDescription>
+                    </DialogHeader>
+                  </DialogContent>
+                </Dialog>
+              </CardFooter>
             </Card>
           ))}
         </div>
